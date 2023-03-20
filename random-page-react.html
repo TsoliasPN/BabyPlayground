@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Page React</title>
+	<style>
+		body {
+			background-color: #FFFFFF; /* set initial background color */
+		}
+	</style>
+</head>
+<body onkeypress="changeBackground()" onmousedown="changeBackground()">
+	<h1>Random Page React</h1>
+	<p>Press any key or click anywhere to see the page react!</p>
+
+	<script>
+		function changeBackground() {
+			var letters = '0123456789ABCDEF'; /* create an array of hexadecimal characters */
+			var color = '#'; /* set initial color value */
+			for (var i = 0; i < 6; i++) {
+				color += letters[Math.floor(Math.random() * 16)]; /* randomly select a hexadecimal character and append it to the color value */
+			}
+			document.body.style.backgroundColor = color; /* set the background color to the randomly generated color */
+		}
+	</script>
+</body>
+</html>
